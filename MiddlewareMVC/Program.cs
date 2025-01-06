@@ -26,11 +26,13 @@ namespace MiddlewareMVC
             builder.Services.AddSwaggerGen();
 
             builder.Services.AddTransient<LoggerMiddleware>();
+            builder.Services.AddTransient<ValidateMiddleware>();
 
 
             var app = builder.Build();
 
             app.UseMiddleware<LoggerMiddleware>();
+            app.UseMiddleware<ValidateMiddleware>();
 
 
             // Configure the HTTP request pipeline.

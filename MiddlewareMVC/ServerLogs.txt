@@ -29,3 +29,50 @@
 200
 06/01/2025 14:39:35 | /Adventurer | POST
 400
+06/01/2025 15:17:11 | /swagger/index.html | GET
+06/01/2025 15:18:43 | /swagger/index.html | GET
+06/01/2025 15:18:44 | /favicon.ico | GET
+06/01/2025 15:19:28 | /swagger/index.html | GET
+200
+06/01/2025 15:19:29 | /swagger/v1/swagger.json | GET
+200
+06/01/2025 15:19:36 | /Adventurer | GET
+200
+06/01/2025 15:19:45 | /Adventurer | POST
+06/01/2025 15:22:00 | /swagger/index.html | GET
+200
+06/01/2025 15:22:01 | /swagger/v1/swagger.json | GET
+200
+06/01/2025 15:22:07 | /Adventurer | POST
+06/01/2025 15:27:55 | /swagger/index.html | GET
+200
+06/01/2025 15:27:56 | /swagger/v1/swagger.json | GET
+200
+06/01/2025 15:28:10 | /Adventurer | POST
+06/01/2025 15:30:16 | /swagger/index.html | GET
+200
+06/01/2025 15:30:17 | /swagger/v1/swagger.json | GET
+200
+06/01/2025 15:30:29 | /Adventurer | POST
+200
+06/01/2025 15:31:21 | /swagger/index.html | GET
+200
+06/01/2025 15:31:21 | /swagger/v1/swagger.json | GET
+200
+06/01/2025 15:32:04 | /swagger/index.html | GET
+200
+06/01/2025 15:32:05 | /swagger/v1/swagger.json | GET
+200
+06/01/2025 15:32:10 | /Adventurer | POST
+06/01/2025 15:36:42 | /swagger/index.html | GET
+200
+06/01/2025 15:36:43 | /swagger/v1/swagger.json | GET
+200
+06/01/2025 15:36:59 | /Adventurer | POST
+06/01/2025 15:38:14 | /swagger/index.html | GET
+200
+06/01/2025 15:38:15 | /swagger/v1/swagger.json | GET
+200
+06/01/2025 15:38:28 | /Adventurer | POST
+06/01/2025 15:39:02 | /Adventurer | GET
+200
