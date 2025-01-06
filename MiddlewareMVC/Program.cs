@@ -1,13 +1,23 @@
 
+using Microsoft.AspNetCore.DataProtection;
+using Microsoft.EntityFrameworkCore;
+using MiddlewareMVC.Services;
+using MiddlewareMVC.Repositories;
+
 namespace MiddlewareMVC
 {
     public class Program
     {
         public static void Main(string[] args)
         {
-            var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            var builder = WebApplication.CreateBuilder(args);
+
+            var conStr = $"Server={Secret.s};Database=AdventurersDb;User Id={Secret.u};Password={Secret.p};Trust Server Certificate=True";
+            builder.Services.AddDbContext<AdventurerDbContext>(o => o.UseSqlServer(conStr));
+            builder.Services.AddScoped<AdventurerService>();
+            builder.Services.AddScoped<AdventurerRepository>();
 
             var conStr = $"{Secret.s};Database=ASPNET_Middleware;User Id=${Secret.u};Password=${Secret.p};Trust Server Certificate=True";
             builder.Services.AddDbContext<MyDbContext>(o => o.UseSqlServer(conStr));
