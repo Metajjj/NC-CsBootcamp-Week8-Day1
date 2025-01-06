@@ -27,5 +27,20 @@ namespace MiddlewareTests
             Assert.That(result[0].Level == 1);
 
         }
+
+
+        [Test]
+        public void TestSuccessfulAdd()
+        {
+            var mockRepo = new Mock<IAdventurerRepository>();
+
+            mockRepo.Setup(s => s.AddAdventurer(new Adventurer("a",FightingClasses.Rogue))).Returns( true );
+
+            var service = new AdventurerService(mockRepo.Object);
+
+            var res = service.AddAdventurer(new Adventurer("a", FightingClasses.Rogue));
+
+            Assert.That(res);
+        }
     }
 }

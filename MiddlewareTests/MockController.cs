@@ -45,5 +45,23 @@ namespace MiddlewareTests
             Assert.Fail();
             
         }
+
+        [Test]
+        public void PostTest()
+        {
+            var mockService = new Mock<IAdventurerService>();
+
+            mockService.Setup(s => s.AddAdventurer(new Adventurer("",0))).Returns( false );
+
+            var controller = new AdventurerController(mockService.Object);
+
+            var result = controller.AddAdventurer(new Adventurer("", 0));
+
+            if (result is BadRequestObjectResult BadRes) {
+                Assert.Pass();
+            }
+            else
+            { Assert.Fail(); }
+        }
     }
 }

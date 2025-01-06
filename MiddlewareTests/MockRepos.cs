@@ -10,9 +10,7 @@ namespace MiddlewareTests
         [Test]
         public void SuccessfulDbQuery()
         {
-            var repo = new AdventurerRepository();
-
-            Assert.Pass()
+            
 
             /*var mockDb = new Mock<>();
 
