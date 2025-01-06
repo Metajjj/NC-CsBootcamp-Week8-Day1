@@ -76,3 +76,43 @@
 06/01/2025 15:38:28 | /Adventurer | POST
 06/01/2025 15:39:02 | /Adventurer | GET
 200
+06/01/2025 15:56:49 | /swagger/index.html | GET
+200
+06/01/2025 15:56:56 | /swagger/v1/swagger.json | GET
+200
+06/01/2025 15:57:10 | /Adventurer | POST
+406
+06/01/2025 15:57:55 | /Adventurer | GET
+200
+06/01/2025 15:58:22 | /Adventurer | GET
+200
+06/01/2025 15:58:56 | /Adventurer | POST
+200
+06/01/2025 15:59:04 | /Adventurer | GET
+200
+06/01/2025 15:59:14 | /Adventurer | POST
+200
+06/01/2025 15:59:23 | /Adventurer | GET
+200
+06/01/2025 15:59:40 | /Adventurer | POST
+406
+06/01/2025 15:59:46 | /Adventurer | GET
+200
+06/01/2025 16:00:07 | /Adventurer | POST
+200
+06/01/2025 16:00:17 | /Adventurer | GET
+200
+06/01/2025 16:01:35 | /swagger/index.html | GET
+200
+06/01/2025 16:01:37 | /swagger/v1/swagger.json | GET
+200
+06/01/2025 16:01:57 | /Adventurer | POST
+406
+06/01/2025 16:02:19 | /Adventurer | GET
+200
+06/01/2025 16:07:08 | /swagger/index.html | GET
+200
+06/01/2025 16:07:11 | /swagger/v1/swagger.json | GET
+200
+06/01/2025 16:07:37 | /Adventurer | POST
+406

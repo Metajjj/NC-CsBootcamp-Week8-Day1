@@ -17,7 +17,9 @@ namespace MiddlewareMVC.Loggers
                 //UNSAFE! RETRY!
 
                 context.Response.StatusCode = StatusCodes.Status406NotAcceptable;
+                context.Response.ContentType = "text/string";
                 await context.Response.Body.WriteAsync("Unaccepted name found! Try again!".Select(x=> Convert.ToByte(x)).ToArray());
+
                 return;
             }
 
@@ -43,7 +45,7 @@ namespace MiddlewareMVC.Loggers
                     "rickroll"];
 
                 req.Body.Position = 0; //Reset after reading
-                return bannedWords.Any(w => rawRequestBody.Contains(w.ToLower()));
+                return bannedWords.Any(w => rawRequestBody.ToLower().Contains(w));
 
             }
 
