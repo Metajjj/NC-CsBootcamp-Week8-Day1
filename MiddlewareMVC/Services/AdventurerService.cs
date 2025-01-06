@@ -6,6 +6,7 @@ namespace MiddlewareMVC.Services
     {
         List<Adventurer> GetAllAdventurers();
         public bool AddAdventurer(Adventurer a);
+        public bool PatchAdventurer(int id, Adventurer a);
     }
 
     public class AdventurerService : IAdventurerService
@@ -28,6 +29,11 @@ namespace MiddlewareMVC.Services
             if (String.IsNullOrWhiteSpace(a.Name)) { return false; }
                 
             return _adventurerRepository.AddAdventurer(a);
+        }
+
+        public bool PatchAdventurer(int id, Adventurer a)
+        {
+            return _adventurerRepository.PatchAdventurer(id, a);
         }
     }
 }

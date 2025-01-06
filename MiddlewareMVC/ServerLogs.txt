@@ -116,3 +116,65 @@
 200
 06/01/2025 16:07:37 | /Adventurer | POST
 406
+06/01/2025 16:28:44 | /swagger/index.html | GET
+200
+06/01/2025 16:28:46 | /swagger/v1/swagger.json | GET
+200
+06/01/2025 16:28:54 | /Adventurer | GET
+200
+06/01/2025 16:29:21 | /Adventurer/2 | PATCH
+200
+06/01/2025 16:29:39 | /Adventurer | GET
+200
+06/01/2025 16:33:33 | /swagger/index.html | GET
+200
+06/01/2025 16:33:35 | /swagger/v1/swagger.json | GET
+200
+06/01/2025 16:33:48 | /Adventurer/2 | PATCH
+200
+06/01/2025 16:34:04 | /Adventurer | GET
+200
+06/01/2025 16:35:17 | /swagger/index.html | GET
+200
+06/01/2025 16:35:20 | /swagger/v1/swagger.json | GET
+200
+06/01/2025 16:35:32 | /Adventurer/2 | PATCH
+200
+06/01/2025 16:35:43 | /Adventurer | GET
+200
+06/01/2025 16:36:14 | /Adventurer/4 | PATCH
+200
+06/01/2025 16:36:55 | /Adventurer | GET
+200
+06/01/2025 16:37:29 | /Adventurer/3 | PATCH
+200
+06/01/2025 16:37:38 | /Adventurer | GET
+200
+06/01/2025 16:39:18 | /Adventurer/98 | PATCH
+400
+06/01/2025 16:39:26 | /Adventurer | GET
+200
+06/01/2025 16:40:32 | /swagger/index.html | GET
+200
+06/01/2025 16:40:34 | /swagger/v1/swagger.json | GET
+200
+06/01/2025 16:40:40 | /Adventurer | GET
+200
+06/01/2025 16:41:01 | /Adventurer/1 | PATCH
+400
+06/01/2025 16:42:39 | /swagger/index.html | GET
+200
+06/01/2025 16:42:40 | /swagger/v1/swagger.json | GET
+200
+06/01/2025 16:42:51 | /Adventurer | GET
+200
+06/01/2025 16:43:16 | /Adventurer/3 | PATCH
+200
+06/01/2025 16:43:31 | /Adventurer | GET
+200
+06/01/2025 16:43:56 | /Adventurer/3 | PATCH
+200
+06/01/2025 16:44:03 | /Adventurer | GET
+200
+06/01/2025 16:44:14 | /Adventurer/3 | PATCH
+400

@@ -31,5 +31,18 @@ namespace MiddlewareMVC.Controllers
 
             return _service.AddAdventurer(adventurer) ? Ok(adventurer) : BadRequest("Could not be added!");
         }
+
+        [HttpPatch("{id}")]
+        public ActionResult PatchAdventurer(int id, Adventurer a)
+        {
+            if (_service.PatchAdventurer(id, a))
+            {
+                return Ok(a);
+            }
+            else
+            {
+                return BadRequest();
+            }
+        }
     }
 }
