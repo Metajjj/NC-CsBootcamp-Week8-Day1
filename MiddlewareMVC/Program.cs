@@ -1,6 +1,8 @@
 
 using Microsoft.AspNetCore.DataProtection;
 using Microsoft.EntityFrameworkCore;
+using MiddlewareMVC.Services;
+using MiddlewareMVC.Repositories;
 
 namespace MiddlewareMVC
 {
@@ -14,7 +16,8 @@ namespace MiddlewareMVC
 
             var conStr = $"Server={Secret.s};Database=AdventurersDb;User Id={Secret.u};Password={Secret.p};Trust Server Certificate=True";
             builder.Services.AddDbContext<AdventurerDbContext>(o => o.UseSqlServer(conStr));
-
+            builder.Services.AddScoped<AdventurerService>();
+            builder.Services.AddScoped<AdventurerRepository>();
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
