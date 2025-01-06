@@ -25,7 +25,9 @@ namespace MiddlewareMVC.Services
         public bool AddAdventurer(Adventurer a)
         {
             //Add default name if not given
-            return String.IsNullOrWhiteSpace(a.Name) ? false : _adventurerRepository.AddAdventurer(a);
+            if (String.IsNullOrWhiteSpace(a.Name)) { return false; }
+                
+            return _adventurerRepository.AddAdventurer(a);
         }
     }
 }

@@ -34,7 +34,10 @@ namespace MiddlewareTests
         {
             var mockRepo = new Mock<IAdventurerRepository>();
 
-            mockRepo.Setup(s => s.AddAdventurer(new Adventurer("a",FightingClasses.Rogue))).Returns( true );
+            mockRepo.Setup(s => s.AddAdventurer(
+                It.IsAny<Adventurer>()
+                ) 
+            ).Returns( true );
 
             var service = new AdventurerService(mockRepo.Object);
 
