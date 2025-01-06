@@ -12,7 +12,7 @@ namespace MiddlewareMVC
             // Add services to the container.
             var builder = WebApplication.CreateBuilder(args);
 
-            var conStr = $"{Secret.s};Database=Week7Day1ASPnet;User Id=${Secret.u};Password=${Secret.p};Trust Server Certificate=True";
+            var conStr = $"Server={Secret.s};Database=Week7Day1ASPnet;User Id={Secret.u};Password={Secret.p};Trust Server Certificate=True";
             builder.Services.AddDbContext<AdventurerDbContext>(o => o.UseSqlServer(conStr));
 
 
