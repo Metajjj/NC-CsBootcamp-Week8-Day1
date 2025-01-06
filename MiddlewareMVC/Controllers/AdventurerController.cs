@@ -7,9 +7,9 @@ namespace MiddlewareMVC.Controllers
     [Route("[controller]")]
     public class AdventurerController : ControllerBase
     {
-        private AdventurerService _service;
+        private IAdventurerService _service;
 
-        public AdventurerController(AdventurerService service)
+        public AdventurerController(IAdventurerService service)
         {
             _service = service;
         }

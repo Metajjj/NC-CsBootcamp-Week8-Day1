@@ -2,7 +2,12 @@
 
 namespace MiddlewareMVC.Repositories
 {
-    public class AdventurerRepository
+    public interface IAdventurerRepository
+    {
+        List<Adventurer> GetAllAdventurers();
+    }
+
+    public class AdventurerRepository : IAdventurerRepository
     {
         private AdventurerDbContext _dbContext;
 
@@ -12,7 +17,7 @@ namespace MiddlewareMVC.Repositories
         }
 
         public List<Adventurer> GetAllAdventurers()
-        {   
+        {
             return _dbContext.Adventurers.ToList();
         }
     }

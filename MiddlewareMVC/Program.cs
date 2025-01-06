@@ -19,9 +19,6 @@ namespace MiddlewareMVC
             builder.Services.AddScoped<AdventurerService>();
             builder.Services.AddScoped<AdventurerRepository>();
 
-            var conStr = $"{Secret.s};Database=ASPNET_Middleware;User Id=${Secret.u};Password=${Secret.p};Trust Server Certificate=True";
-            builder.Services.AddDbContext<MyDbContext>(o => o.UseSqlServer(conStr));
-
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
@@ -39,7 +36,6 @@ namespace MiddlewareMVC
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
-
 
             app.MapControllers();
 

@@ -2,11 +2,16 @@
 
 namespace MiddlewareMVC.Services
 {
-    public class AdventurerService
+    public interface IAdventurerService
     {
-        private AdventurerRepository _adventurerRepository;
+        List<Adventurer> GetAllAdventurers();
+    }
 
-        public AdventurerService(AdventurerRepository adventurerRepository)
+    public class AdventurerService : IAdventurerService
+    {
+        private IAdventurerRepository _adventurerRepository;
+
+        public AdventurerService(IAdventurerRepository adventurerRepository)
         {
             _adventurerRepository = adventurerRepository;
         }
