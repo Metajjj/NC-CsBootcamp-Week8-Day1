@@ -178,3 +178,17 @@
 200
 06/01/2025 16:44:14 | /Adventurer/3 | PATCH
 400
+06/01/2025 16:50:23 | /swagger/index.html | GET
+200
+06/01/2025 16:50:24 | /swagger/v1/swagger.json | GET
+200
+06/01/2025 16:50:34 | /Adventurer | GET
+200
+06/01/2025 16:51:02 | /Adventurer/3 | PATCH
+200
+06/01/2025 16:51:09 | /Adventurer | GET
+200
+06/01/2025 16:51:32 | /Adventurer/5 | PATCH
+200
+06/01/2025 16:51:39 | /Adventurer | GET
+200

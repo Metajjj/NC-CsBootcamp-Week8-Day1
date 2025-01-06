@@ -52,7 +52,7 @@ namespace MiddlewareMVC.Repositories
             }
             else if (a.Level == 0 && a.XP > 0)
             {
-                aToChange.XP = a.XP;
+                aToChange.GainXp(a.XP);
 /*                a.Name = aToChange.Name;
                 a.Level = aToChange.Level;
                 a.FightingClass = aToChange.FightingClass;

@@ -20,5 +20,15 @@
         {
             Name = name; FightingClass= fightingClass;
         }
+
+        public void GainXp(int xpGain)
+        {
+            if (XP + xpGain >= 100)
+            {
+                Level++;
+                XP = 0;
+            }
+        }
+            
     }
 }
