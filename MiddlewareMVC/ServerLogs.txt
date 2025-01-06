@@ -192,3 +192,13 @@
 200
 06/01/2025 16:51:39 | /Adventurer | GET
 200
+06/01/2025 16:56:46 | /swagger/index.html | GET
+200
+06/01/2025 16:56:47 | /swagger/v1/swagger.json | GET
+200
+06/01/2025 16:56:59 | /Adventurer/987 | DELETE
+400
+06/01/2025 16:57:11 | /Adventurer/5 | DELETE
+204
+06/01/2025 16:57:18 | /Adventurer | GET
+200

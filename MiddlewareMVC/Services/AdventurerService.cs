@@ -7,6 +7,7 @@ namespace MiddlewareMVC.Services
         List<Adventurer> GetAllAdventurers();
         public bool AddAdventurer(Adventurer a);
         public bool PatchAdventurer(int id, Adventurer a);
+        public bool DeleteAdventurer(int id);
     }
 
     public class AdventurerService : IAdventurerService
@@ -34,6 +35,11 @@ namespace MiddlewareMVC.Services
         public bool PatchAdventurer(int id, Adventurer a)
         {
             return _adventurerRepository.PatchAdventurer(id, a);
+        }
+
+        public bool DeleteAdventurer(int id)
+        {
+            return _adventurerRepository.DeleteAdventurer(id);
         }
     }
 }

@@ -44,5 +44,15 @@ namespace MiddlewareMVC.Controllers
                 return BadRequest();
             }
         }
+
+        [HttpDelete("{id}")]
+        public ActionResult DeleteAdventurer(int id)
+        {
+            if (_service.DeleteAdventurer(id))
+            {
+                return NoContent();
+            }
+            else { return BadRequest(); }
+        }
     }
 }

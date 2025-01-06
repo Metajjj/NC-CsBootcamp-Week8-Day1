@@ -7,6 +7,7 @@ namespace MiddlewareMVC.Repositories
         List<Adventurer> GetAllAdventurers();
         public bool AddAdventurer(Adventurer a);
         public bool PatchAdventurer(int id, Adventurer a);
+        public bool DeleteAdventurer(int id);
     }
 
     public class AdventurerRepository : IAdventurerRepository
@@ -74,6 +75,17 @@ namespace MiddlewareMVC.Repositories
             /*            _dbContext.Adventurers.Remove(aToChange);
                         _dbContext.Add(a);*/
             _dbContext.Adventurers.Update(aToChange);
+            _dbContext.SaveChanges();
+            return true;
+        }
+
+        public bool DeleteAdventurer(int id)
+        {
+            Adventurer? aToDelete = GetAdventurer(id);
+
+            if (aToDelete is null) return false;
+
+            _dbContext.Adventurers.Remove(aToDelete);
             _dbContext.SaveChanges();
             return true;
         }
