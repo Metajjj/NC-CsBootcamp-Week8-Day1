@@ -19,5 +19,17 @@ namespace MiddlewareMVC.Controllers
         {
             return Ok(_service.GetAllAdventurers());
         }
+
+
+        [HttpPost]
+        public ActionResult AddAdventurer(Adventurer a)
+        {
+
+            a.Level = 1; //a.Level < 1 ? 1 : a.Level;
+
+            var adventurer = new Adventurer(a.Name, a.FightingClass);
+
+            return _service.AddAdventurer(adventurer) ? Ok(adventurer) : BadRequest("Could not be added!");
+        }
     }
 }

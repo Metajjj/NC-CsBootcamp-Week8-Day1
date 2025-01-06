@@ -5,6 +5,7 @@ namespace MiddlewareMVC.Services
     public interface IAdventurerService
     {
         List<Adventurer> GetAllAdventurers();
+        public bool AddAdventurer(Adventurer a);
     }
 
     public class AdventurerService : IAdventurerService
@@ -19,6 +20,12 @@ namespace MiddlewareMVC.Services
         public List<Adventurer> GetAllAdventurers()
         {
             return _adventurerRepository.GetAllAdventurers();
+        }
+
+        public bool AddAdventurer(Adventurer a)
+        {
+            //Add default name if not given
+            return String.IsNullOrWhiteSpace(a.Name) ? false : _adventurerRepository.AddAdventurer(a);
         }
     }
 }
