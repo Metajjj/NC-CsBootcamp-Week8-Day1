@@ -17,14 +17,20 @@ namespace MiddlewareMVC
 
         protected override void OnConfiguring(DbContextOptionsBuilder o)
         {
-            if (h.IsDevelopment)
+            if (h.IsDevelopment())
             {
-                o.use
+                o.UseInMemoryDatabase("TmpDB");
             }
+            else if (h.IsProduction())
+            {
+                var conStr = $"Server={Secret.s};Database=AdventurersDb;User Id={Secret.u};Password={Secret.p};Trust Server Certificate=True";
 
-            var conStr = $"Server={Secret.s};Database=AdventurersDb;User Id={Secret.u};Password={Secret.p};Trust Server Certificate=True";
-
-            o.UseSqlServer(conStr);
+                o.UseSqlServer(conStr);
+            }
+            else
+            {
+                throw new NotImplementedException("Unexpected env - no db allowed");
+            }
         }
 
     }
